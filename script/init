@@ -8,5 +8,7 @@ docker-compose run --rm web bundle exec rails new . --force --database=postgresq
 
 cp -f template/database.yml config/database.yml
 
+docker-compose build
+
 docker-compose run --rm web bin/rails db:create
 docker-compose run --rm web bin/rails db:migrate
